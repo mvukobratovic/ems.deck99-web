@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://ems.deck99.hr/">
+<meta property="og:url" content="https://ems.deck99.hr/">
+<meta property="og:title" content="IEMS — Intelligent Energy Management">
+<title>IEMS — Intelligent Energy Management | Deck99</title>
+<meta name="description" content="IEMS by Versolvio, engineered with Deck99. Monitoring, dispatch, optimization and integration for BESS, renewables and industrial energy assets.">
+<meta name="theme-color" content="#1d1d20">
+<link rel="icon" href="assets/favicon.png">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="assets/fonts/geist.css">
+<link rel="stylesheet" href="assets/core.css?v=2">
+<style>
+/* ---- EMS-specific ---- */
+.ems-intro{padding:calc(var(--hh) + 56px) var(--pad) 70px}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:64px;display:flex;gap:10px}
+.crumb a:hover{color:var(--gold)}
+.intro-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:80px;align-items:end}
+.productmark{font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:26px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.productmark small{font-size:10.5px;color:var(--sec);letter-spacing:.18em}
+.lede{color:var(--muted);line-height:1.75;font-size:18px;max-width:480px}
+.tour{padding:10px var(--pad) 130px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{padding:13px 20px;font-size:13px;border:1px solid var(--line);color:var(--muted);transition:background .4s,color .4s,border-color .4s}
+.tabs button:hover{border-color:var(--gold);color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.shot-stage{perspective:1800px}
+.shot{background:var(--deep);border:1px solid var(--line);transform-origin:50% 0;will-change:transform}
+.shot-bar{display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:10.5px;letter-spacing:.18em;color:var(--muted);background:#141417}
+.shot-bar i{width:9px;height:9px;border-radius:50%;background:#3b3e45;display:inline-block}
+.shot-bar i:first-child{background:var(--gold)}
+.shot-bar span{margin-left:10px}
+.shot-img{position:relative;overflow:hidden;aspect-ratio:16/9.2;background:#0f0f11}
+.shot-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;transition:opacity .5s,transform 1s var(--e)}
+.shot-img img.out{opacity:0;transform:scale(1.02)}
+.shot-cap{display:grid;grid-template-columns:1.1fr 1fr auto;gap:50px;align-items:end;margin-top:36px}
+.shot-cap h3{font-size:clamp(26px,2.6vw,40px);letter-spacing:-.04em;line-height:1.08}
+.shot-cap p{color:var(--muted);line-height:1.7;font-size:15.5px}
+.shot-note{color:color-mix(in srgb,var(--muted) 70%,var(--bg));font-size:12px;line-height:1.7;margin-top:30px;max-width:760px}
+.opt{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center}
+.opt .chart{background:var(--deep);padding:20px}
+.opt .chart svg{width:100%;height:auto;display:block}
+.afrr{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;margin-top:80px;padding:34px 0 0;border-top:1px solid var(--line)}
+.afrr h3{font-size:clamp(22px,2vw,30px);letter-spacing:-.03em;line-height:1.15}
+.afrr p{color:var(--muted);line-height:1.75;font-size:15.5px}
+.arch-note{color:color-mix(in srgb,var(--muted) 75%,var(--bg));font-size:12.5px;line-height:1.7;max-width:720px;margin-top:-6vh;padding:0 var(--pad) 120px}
+.lic-note{display:flex;justify-content:space-between;gap:40px;align-items:center;margin-top:60px;padding-top:34px;border-top:1px solid var(--line);flex-wrap:wrap}
+.lic-note p{color:var(--muted);font-size:14px;line-height:1.7;max-width:620px}
+.arch-sec{padding-top:130px}
+@media (max-width:1100px){.intro-grid,.opt,.afrr{grid-template-columns:1fr;gap:34px}.shot-cap{grid-template-columns:1fr;gap:18px}}
+@media (max-width:900px){.crumb{margin-bottom:36px}.tour{padding-bottom:90px}.arch-note{margin-top:0}}
+</style>
+</head>
+<body id="top">
+
+<div class="loader" aria-hidden="true"><div class="ld-in"><img class="ld-logo" src="assets/deck99-logo.png" alt=""><div class="ld-bar"></div></div></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site">
+  <a href="https://deck99.hr/" class="brand" aria-label="Deck99 home"><img src="assets/deck99-logo.png" alt="Deck99"></a>
+  <button class="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main navigation">
+    <a href="#capabilities">Capabilities</a>
+    <a href="#screens">Product tour</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#licensing">Licensing</a>
+    <a class="button mag" href="#contact">Let's talk <span>↗</span></a>
+  </nav>
+</header>
+
+<main>
+<!-- ================= INTRO ================= -->
+<div class="ems-intro">
+  <div class="crumb" data-h><a href="https://deck99.hr/">Deck99</a> <span>/</span> <span>Energy management software</span></div>
+  <div class="intro-grid">
+    <div>
+      <div class="productmark" data-h>IEMS <small>BY VERSOLVIO · ENGINEERED WITH DECK99</small></div>
+      <h1 data-split="hero">Every asset.<br>One <em>intelligent system.</em></h1>
+    </div>
+    <div>
+      <p class="lede" data-h>Connect battery storage, renewables and site demand. Turn operational data, market signals and asset constraints into coordinated energy decisions.</p>
+      <div class="actions" data-h><a class="button mag" href="#contact">Discuss your EMS project ↗</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PRODUCT TOUR ================= -->
+<section class="tour" id="screens">
+  <div class="tabs" role="tablist" aria-label="EMS product screenshots" data-r>
+    <button role="tab" id="tab-overview" data-screen="overview" aria-selected="true">01 / Fleet &amp; control room</button>
+    <button role="tab" id="tab-optimization" data-screen="optimization" aria-selected="false">02 / Optimization</button>
+    <button role="tab" id="tab-observability" data-screen="observability" aria-selected="false">03 / Observability</button>
+  </div>
+  <div class="shot-stage">
+    <figure class="shot" id="shot" role="tabpanel" aria-labelledby="tab-overview">
+      <div class="shot-bar"><i></i><i></i><i></i><span>IEMS / OPERATOR WORKSPACE</span></div>
+      <div class="shot-img"><img id="product-screen" src="assets/ems-overview.png" alt="IEMS System Overview with fleet assets, live power, state of charge and telemetry"></div>
+    </figure>
+  </div>
+  <div class="shot-cap">
+    <h3 id="screen-title" data-r>From fleet overview to individual asset.</h3>
+    <p id="screen-description" data-r>Live asset status, state of charge, power and telemetry freshness in a focused operator workspace.</p>
+    <a class="text-link" id="screen-full" href="assets/ems-overview.png" target="_blank" rel="noopener" data-r>View full screen ↗</a>
+  </div>
+  <p class="shot-note" data-r>Actual interface screenshots supplied by Versolvio. Values and runtime states represent the captured environment; financial examples are not performance forecasts.</p>
+</section>
+<div class="strip">
+  <div data-r><small>CONTROL</small><strong>Fleet to individual asset</strong></div>
+  <div data-r><small>OPTIMIZATION</small><strong>Markets, demand &amp; constraints</strong></div>
+  <div data-r><small>INTEGRATION</small><strong>Hardware-independent architecture</strong></div>
+  <div data-r><small>DEPLOYMENT</small><strong>Cloud, on-premise &amp; hybrid</strong></div>
+</div>
+
+<!-- ================= CAPABILITIES ================= -->
+<section id="capabilities" style="padding-top:150px">
+  <div class="wrap sec-head">
+    <div>
+      <p class="eyebrow dot" data-r>ONE OPERATIONAL ENVIRONMENT</p>
+      <h2 data-split>See clearly. Decide intelligently. Act with control.</h2>
+    </div>
+    <p class="lead" data-r>IEMS brings the operational and commercial sides of energy together. Operators work with a shared asset model, while planning, dispatch and automation coordinate around site limits and battery constraints.</p>
+  </div>
+  <div class="story-track" id="capStory" style="--n:8;margin-top:40px">
+    <div class="story-stage">
+      <ol class="story-list sm">
+        <span class="story-rail" aria-hidden="true"><i></i></span>
+        <li><button class="story-item on" aria-current="true"><span class="row"><span class="n">01</span><span class="t">Fleet &amp; site visibility</span></span><span class="d"><p>System overview, BESS operations and comparison, C&amp;I operations and live optimization views. Move from portfolio posture to asset-level details.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">02</span><span class="t">Dispatch &amp; telemetry</span></span><span class="d"><p>Asset state, power trends, telemetry freshness, dispatch execution and verification, alongside alarms and safety views.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">03</span><span class="t">Market context</span></span><span class="d"><p>CROPEX market data and price histories support scheduling and scenario analysis. Market-specific interfaces are scoped to the deployment.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">04</span><span class="t">A connected asset model</span></span><span class="d"><p>Topology, asset management and system design describe how storage, generation, meters, loads and grid connections fit together.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">05</span><span class="t">Plans &amp; policies</span></span><span class="d"><p>Day planners, interval planners and policies translate operating priorities into configurable schedules and constraints.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">06</span><span class="t">Energy decisions</span></span><span class="d"><p>Day-ahead scheduling, demand shaping and scenario comparison account for battery power, energy limits, efficiency and state of charge.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">07</span><span class="t">Coordinated workflows</span></span><span class="d"><p>Triggers and operating rules coordinate repeatable actions, while orchestration manages workflow lifecycles.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">08</span><span class="t">Operational confidence</span></span><span class="d"><p>Observability, user management and security views expose service health, event delivery, edge routing and command-pipeline diagnostics.</p></span></button></li>
+      </ol>
+      <div class="vis" aria-hidden="true"><div class="vis-count"><b>01</b> / 08</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPTIMIZATION ================= -->
+<section class="panel pad-sec" id="optimization">
+  <div class="opt">
+    <div>
+      <p class="eyebrow dot" data-r>OPTIMIZATION WITH CONTEXT</p>
+      <h2 data-split>Value is more than a price spread.</h2>
+      <p class="copy" style="margin-top:26px" data-r>A battery has finite energy, power limits and competing priorities. IEMS connects market opportunities with site demand and operating constraints to evaluate how that flexibility can be used.</p>
+      <div class="pills"><span data-r>Day-ahead scheduling</span><span data-r>Peak shaving</span><span data-r>SoC policies</span><span data-r>Import / export limits</span><span data-r>PV + BESS</span></div>
+    </div>
+    <div class="chart" id="optChart" data-inview data-r aria-hidden="true"></div>
+  </div>
+  <div class="cards" style="margin-top:90px">
+    <article class="card" data-r><small>01 / PLAN</small><h3>Optimize within the asset envelope</h3><p>Evaluate schedules using power and energy limits, efficiency assumptions and configurable state-of-charge boundaries.</p></article>
+    <article class="card" data-r><small>02 / COORDINATE</small><h3>Balance site and market priorities</h3><p>Compare baseline and optimized grid power alongside battery impact, price signals and reserve requirements.</p></article>
+    <article class="card" data-r><small>03 / EXECUTE</small><h3>Keep decisions connected to control</h3><p>Separate optimization proposals from dispatch constraints and execution. Monitoring and verification keep operating feedback visible.</p></article>
+  </div>
+  <div class="afrr" data-r>
+    <h3>Ancillary services &amp; reserve-aware optimization</h3>
+    <p>The supplied interface demonstrates reserve envelopes, upward and downward activation scenarios and ancillary-service value analysis. Live aFRR participation depends on the contracted integration, validation and applicable market qualification.</p>
+  </div>
+</section>
+
+<!-- ================= ARCHITECTURE ================= -->
+<section class="arch-sec" id="architecture">
+  <div class="wrap sec-head">
+    <div>
+      <p class="eyebrow dot" data-r>BUILT AS A CONNECTED SYSTEM</p>
+      <h2 data-split>Modular by design. Coordinated in operation.</h2>
+    </div>
+    <p class="lead" data-r>A Next.js operator interface connects to Go microservices. Routing, dispatch decisions, workflow orchestration and automation have distinct responsibilities, supported by shared telemetry and market data.</p>
+  </div>
+  <div class="story-track" id="archStory" style="--n:3;margin-top:40px">
+    <div class="story-stage">
+      <ol class="story-list">
+        <span class="story-rail" aria-hidden="true"><i></i></span>
+        <li><button class="story-item on" aria-current="true"><span class="row"><span class="n">01</span><span class="t">Routing stays routing.</span></span><span class="d"><p>The gateway directs requests. Dispatch decisions and constraints belong in the dispatch service, keeping control logic explicit.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">02</span><span class="t">Connect through defined interfaces.</span></span><span class="d"><p>Containerized modules and APIs support integration with customer and partner environments without exposing proprietary optimizer code.</p></span></button></li>
+        <li><button class="story-item"><span class="row"><span class="n">03</span><span class="t">Understand what happened.</span></span><span class="d"><p>Service health, event publishing, outbox diagnostics, edge connectivity and command verification support diagnosis and operation.</p></span></button></li>
+      </ol>
+      <div class="vis" aria-hidden="true"><div class="vis-count"><b>01</b> / 03</div></div>
+    </div>
+  </div>
+  <p class="arch-note" data-r>Logical architecture overview. API requests are routed to the responsible services; events and telemetry connect workflows with site feedback. Physical topology and enabled modules are defined per project.</p>
+</section>
+
+<!-- ================= DEPLOYMENT ================= -->
+<section class="panel pad-sec" id="deployment">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow dot" data-r>DEPLOYMENT &amp; INTEGRATION</p>
+      <h2 data-split>The right architecture for the site.</h2>
+    </div>
+    <p class="lead" data-r>Select the deployment around operational autonomy, IT/OT boundaries, connectivity and integration requirements.</p>
+  </div>
+  <div class="cards boxed" style="--cols:4;--gap:22px;margin-top:70px">
+    <article class="card" data-r><div class="mini-wrap" data-inview data-mini="0"></div><small>01</small><h3>Cloud</h3><p>A hosted environment for central visibility, data analysis and coordinated portfolio access.</p></article>
+    <article class="card" data-r><div class="mini-wrap" data-inview data-mini="1"></div><small>02</small><h3>On-premise</h3><p>Project-specific local deployment for selected control services and integration with site infrastructure.</p></article>
+    <article class="card" data-r><div class="mini-wrap" data-inview data-mini="2"></div><small>03</small><h3>Hybrid</h3><p>Combine local control with cloud visibility. Local safety interlocks remain part of the site design.</p></article>
+    <article class="card" data-r><div class="mini-wrap" data-inview data-mini="3"></div><small>04</small><h3>Industrial connectivity</h3><p>BMS, PCS, inverter, meter and SCADA interfaces are engineered per project. Protocol scope can include Modbus, OPC UA, IEC 61850 and REST APIs.</p></article>
+  </div>
+</section>
+
+<!-- ================= LICENSING ================= -->
+<section class="pad-sec" id="licensing">
+  <div class="sec-head">
+    <div>
+      <p class="eyebrow dot" data-r>COMMERCIAL FLEXIBILITY</p>
+      <h2 data-split>Licensed around the actual project.</h2>
+    </div>
+    <p class="lead" data-r>Deployment, asset scope, enabled modules, integrations and service requirements define the commercial agreement. Licensing and support terms are agreed for each project.</p>
+  </div>
+  <div class="cards boxed" style="margin-top:70px;--gap:22px">
+    <article class="card" data-r><small>HOSTED OPERATION</small><h3>Subscription</h3><p>Discuss a hosted software agreement aligned with the required platform and service scope.</p><ul style="margin-top:18px"><li>Enabled modules and asset scope</li><li>Hosting and data requirements</li><li>Updates and support terms</li></ul><a class="text-link" href="#contact">Discuss a subscription ↗</a></article>
+    <article class="card" data-r><small>LOCAL DEPLOYMENT</small><h3>Project license</h3><p>Define the right-to-use scope for a specified installation and operating environment.</p><ul style="margin-top:18px"><li>Site and deployment boundaries</li><li>Container and API integration</li><li>Maintenance agreed separately</li></ul><a class="text-link" href="#contact">Discuss a site license ↗</a></article>
+    <article class="card" data-r><small>PARTNER INTEGRATION</small><h3>Enterprise &amp; OEM</h3><p>Structure a partner agreement for integration into a wider energy solution or project portfolio.</p><ul style="margin-top:18px"><li>API and integration responsibilities</li><li>Project-specific licensing terms</li><li>Support, SLA and development scope</li></ul><a class="text-link" href="#contact">Discuss a partnership ↗</a></article>
+  </div>
+  <div class="lic-note" data-r>
+    <p>These are engagement routes, not fixed product tiers. License duration, fees, hosting, integration, maintenance and SLA commitments are confirmed in the project offer.</p>
+    <a class="button mag" href="#contact">Request a tailored proposal ↗</a>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="panel faq">
+  <div>
+    <p class="eyebrow dot" data-r>QUESTIONS, ANSWERED</p>
+    <h2 data-split>From first discussion to integration.</h2>
+  </div>
+  <div data-r>
+    <div class="qa on"><button>Which energy assets can the platform cover?</button><div class="ans"><div><p>Standalone BESS, PV + BESS and wind + BESS configurations, as well as controllable demand and grid connections. Supported devices and functions are confirmed through the integration scope.</p></div></div></div>
+    <div class="qa"><button>Can the platform work with our existing SCADA?</button><div class="ans"><div><p>Integration is scoped around the existing SCADA, supported interfaces and responsibility boundaries. Protocol selection, control permissions and verification requirements form part of engineering.</p></div></div></div>
+    <div class="qa"><button>Are the financial figures on the screenshots guaranteed returns?</button><div class="ans"><div><p>No. They show the captured scenario and its assumptions. Actual results depend on asset performance, operating constraints, market prices, activation and the contracted operating model.</p></div></div></div>
+    <div class="qa"><button>How are security and local control handled?</button><div class="ans"><div><p>Role-based access, audit logging, secure interfaces and OT/IT separation are addressed in the deployment design. Local safety interlocks and the required level of offline autonomy are defined and validated for each site.</p></div></div></div>
+    <div class="qa"><button>How do we start?</button><div class="ans"><div><p>Share your asset configuration, site limits, intended operating modes, integration interfaces and deployment requirements. We can then define the technical scope, commissioning approach and commercial proposal.</p></div></div></div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div>
+    <p class="eyebrow dot" data-r>YOUR ASSET. YOUR OPERATING PRIORITIES.</p>
+    <h2 data-split>Let's connect the whole energy picture.</h2>
+  </div>
+  <a class="button mag" href="https://www.linkedin.com/company/deck99" data-r>Discuss your EMS project ↗</a>
+</section>
+</main>
+
+<footer class="site" id="contact">
+  <div class="footer-grid">
+    <div data-r><a href="#top" aria-label="Back to top"><img src="assets/deck99-logo.png" alt="Deck99" style="width:150px;height:54px;object-fit:contain;margin-bottom:14px"></a><p>Custom software for energy innovators,<br>blockchain ecosystems and real-world assets.</p></div>
+    <div data-r><h3>CONTACT &amp; COMPANY</h3><p>Deck 99 Ltd.<br>Josipa Jurja Strossmayera 341<br>31000 Osijek, Croatia<br>VAT: HR91512597206</p><p><a href="https://www.linkedin.com/company/deck99">LinkedIn ↗</a></p></div>
+    <div data-r><h3>BANK DETAILS</h3><p>IBAN: HR8823600001103048254<br>BIC: ZABAHR2X<br>Zagrebačka banka d.d.<br>Trg bana Josipa Jelačića 10, Zagreb</p></div>
+  </div>
+  <div class="giant" aria-hidden="true"><span>IEMS</span></div>
+  <div class="foot-bottom"><p>© 2026 Deck99 Ltd. All rights reserved.</p><a href="#top">Back to top ↑</a></div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/core.js?v=2"></script>
+<script>
+(function(){
+const {C,rnd,h}=D99, {A,P,L,T,R,PILL,BOX,DOT,SVG}=h;
+const GOLD=C.gold,SEC=C.sec,INK=C.ink,MUT=C.muted,DEEP=C.deep,TILE=C.tile,LINE=C.line;
+
+/* ---------- capability scenes ---------- */
+const caps=[
+/* 1 fleet */ ()=>{let s='';
+  const names=[0,1,2,3,4,5,6,7,8];
+  names.forEach(i=>{const c=i%3,r=(i/3)|0,x=40+c*140,y=84+r*108,hot=i===4,soc=[72,48,88,35,64,91,56,80,43][i];
+    s+=A(i*.6,R(x,y,124,92,{rx:8,fill:DEEP,stroke:hot?GOLD:SEC,so:hot?1:.55})
+      +`<circle cx="${x+16}" cy="${y+18}" r="4.5" fill="${i===6?GOLD:SEC}" ${i===6?'class="seg"':''}/>`+R(x+28,y+14,56,7,{rx:3.5,fill:INK,op:.75})
+      +R(x+14,y+40,96,6,{rx:3,fill:LINE})+`<rect class="ln" style="--i:${i*.6+3}" x="${x+14}" y="${y+40}" width="${soc*.96}" height="6" rx="3" fill="${hot?GOLD:SEC}"/>`
+      +R(x+14,y+60,50,6,{rx:3,fill:MUT,op:.35})+R(x+14,y+72,34,6,{rx:3,fill:MUT,op:.2}))});
+  s+=`<rect class="halo" x="180" y="192" width="124" height="92" rx="8" fill="none" stroke="${GOLD}" style="animation-duration:3.4s"/>`;
+  return SVG(s+T(10,40,432,'Portfolio posture down to asset-level detail'))},
+/* 2 dispatch & telemetry */ ()=>{
+  const d='M40 300 C90 300 100 200 150 205 S220 300 270 270 S340 140 390 170 S430 230 440 215';
+  let bars='';for(let i=0;i<16;i++)bars+=`<rect class="up" style="--i:${i*.4+4}" x="${40+i*25.5}" y="${402-(18+rnd(i+4)*20)}" width="14" height="${18+rnd(i+4)*20}" rx="2" fill="${i===11?GOLD:SEC}" ${i===11?'':'fill-opacity=".8"'}/>`;
+  return SVG(R(40,90,400,230,{rx:10,fill:DEEP,stroke:LINE})+L(0,'M40 205H440',LINE,1.5,'stroke-dasharray="4 8"')
+   +L(1,d,SEC,2.6)+DOT(d,5,0,GOLD,5)
+   +[150,270,390].map((x,i)=>P(5+i,`<path d="M${x} ${[205,270,170][i]-16} l8 8 -8 8 -8 -8z" fill="${GOLD}"/>`)).join('')
+   +T(3,50,114,'Power trend',{fill:INK,size:13})+T(3,430,114,'Dispatch verified',{anchor:'end',fill:GOLD,size:12})
+   +T(8,40,368,'Telemetry freshness',{size:12.5})+bars+T(12,40,432,'State, power and telemetry in one control room'))},
+/* 3 market */ ()=>{let b='';
+  for(let i=0;i<20;i++){const v=.5+.5*Math.sin(i/20*Math.PI*2-1.2)+rnd(i)*.18,hh=40+v*130,hi=v>.9,lo=v<.18;
+    b+=`<rect class="up" style="--i:${i*.45}" x="${44+i*19.5}" y="${340-hh}" width="12" height="${hh}" rx="2" fill="${hi?GOLD:lo?SEC:MUT}" fill-opacity="${hi||lo?1:.35}"/>`}
+  return SVG(T(0,40,100,'Day-ahead price curve',{fill:INK,size:14})+T(0,440,100,'CROPEX',{anchor:'end',fill:SEC,size:12})+b
+   +L(9,'M40 340H440',LINE,1.5)+L(10,'M40 214H440',GOLD,1.5,'stroke-dasharray="3 7"')+T(11,440,206,'Scenario threshold',{anchor:'end',size:11.5})
+   +A(12,PILL(0,40,372,118,30,'Price history',{size:12}))+A(13,PILL(0,170,372,128,30,'Scenario analysis',{size:12,stroke:GOLD}))+T(14,40,432,'Market data supports scheduling'))},
+/* 4 asset model */ ()=>{
+  const nodes=[['Storage',34],['Generation',146],['Loads',258],['Meters',370]];let s='';
+  s+=BOX(0,165,64,150,42,'Grid connection',{stroke:GOLD,size:13})+L(2,'M240 106V150',SEC,1.8)+BOX(3,190,150,100,34,'Meter',{size:12.5})+L(4,'M240 184V214',SEC,1.8)+L(5,'M84 214H420',SEC,1.8);
+  nodes.forEach(([n,x],i)=>{s+=L(6+i,`M${x+50} 214V250`,SEC,1.8)+BOX(8+i,x,250,100,50,n,{size:13,stroke:i===0?GOLD:SEC})+DOT(`M240,106 L240,214 L${x+50},214 L${x+50},250`,3.2,i*.6)});
+  s+=`<g class="a" style="--i:12">${[34,146,258,370].map((x,i)=>`<rect x="${x+14}" y="${324}" width="${72-i*8}" height="6" rx="3" fill="${MUT}" fill-opacity="${.4-i*.06}"/>`).join('')}</g>`;
+  return SVG(s+T(13,40,432,'Storage, generation, meters, loads and grid'))},
+/* 5 planner */ ()=>{
+  const rows=[['Day planner',[[0,5,SEC],[5,4,GOLD],[9,6,SEC],[15,5,GOLD],[20,4,SEC]]],['Interval planner',[[0,8,MUT],[8,3,GOLD],[11,7,MUT],[18,6,SEC]]],['Policies',[[0,24,TILE],[6,3,GOLD],[17,3,GOLD]]]];
+  let s='';rows.forEach(([n,seg],ri)=>{const y=104+ri*88;
+    s+=T(ri,40,y-8,n,{fill:INK,size:13.5})+R(40,y,400,34,{rx:6,fill:DEEP,stroke:LINE});
+    seg.forEach(([a,w,col],k)=>s+=`<rect class="ln" style="--i:${ri*3+k+2}" x="${42+a*16.5}" y="${y+4}" width="${w*16.5-3}" height="26" rx="4" fill="${col}" fill-opacity="${col===TILE?.9:.85}"/>`)});
+  for(let i=0;i<=4;i++)s+=T(8,40+i*100,372,String(i*6).padStart(2,'0')+':00',{size:11,anchor:i===4?'end':'start'});
+  return SVG(s+PILL(9,40,396,118,30,'Priorities',{size:12})+PILL(10,170,396,118,30,'Constraints',{size:12})+PILL(11,300,396,118,30,'Schedules',{size:12,stroke:GOLD}))},
+/* 6 energy decisions */ ()=>{
+  const base='M40 220 C90 220 110 150 160 150 S230 250 290 240 S360 120 440 140';
+  const opt ='M40 230 C90 230 110 205 160 205 S230 215 290 212 S360 190 440 195';
+  return SVG(R(40,86,400,200,{rx:10,fill:DEEP,stroke:LINE})
+   +L(0,base,MUT,2,'stroke-dasharray="6 6"')+L(1,opt,GOLD,3)+DOT(opt,5,0,GOLD,5)
+   +T(2,52,110,'Grid power',{fill:INK,size:13})+`<g class="a" style="--i:3"><rect x="300" y="100" width="22" height="3" fill="${MUT}"/><text x="328" y="105" fill="${MUT}" font-size="11.5">Baseline</text><rect x="380" y="100" width="22" height="3" fill="${GOLD}"/><text x="408" y="105" fill="${GOLD}" font-size="11.5">Optimized</text></g>`
+   +T(4,40,318,'State of charge',{fill:INK,size:13})+L(5,'M40 340H440',GOLD,1.2,'stroke-dasharray="3 6"')+L(6,'M40 400H440',GOLD,1.2,'stroke-dasharray="3 6"')
+   +L(7,'M40 392 C110 392 130 346 200 346 S270 395 330 372 S400 348 440 352',SEC,2.6)+T(8,440,332,'Max SoC',{anchor:'end',size:11})+T(8,440,418,'Min SoC',{anchor:'end',size:11}))},
+/* 7 workflows */ ()=>{
+  const n=[['Trigger',36],['Rule',144],['Action',252],['Verify',360]];let s='';
+  n.forEach(([t,x],i)=>{s+=BOX(i*2,x,160,84,48,t,{rx:24,stroke:i===2?GOLD:SEC})+(i<3?L(i*2+1,`M${x+84} 184H${x+108}`,GOLD,2):'')});
+  s+=DOT('M120,184 L144,184 M228,184 L252,184 M336,184 L360,184',2.4,0,GOLD,4.5)+L(8,'M402 208V256H78V208',SEC,1.6,'stroke-dasharray="4 7"');
+  s+=BOX(9,36,300,408,44,'Orchestrator · workflow lifecycle',{fill:'none',stroke:LINE,ink:MUT,size:13});
+  ['Queued','Running','Verified'].forEach((t,i)=>s+=PILL(10+i,60+i*130,352,106,28,t,{size:11.5,stroke:i===2?GOLD:SEC}));
+  return SVG(s+T(14,40,432,'Repeatable actions, managed from start to finish'))},
+/* 8 confidence */ ()=>{
+  const sv=['Gateway','Dispatch','Orchestrator','Automation','Telemetry','Market'];let s='';
+  sv.forEach((n,i)=>{const c=i%2,r=(i/2)|0,x=40+c*210,y=88+r*76;
+    s+=A(i,R(x,y,190,58,{rx:8,fill:DEEP,stroke:SEC,so:.55})+`<circle class="seg" style="--d:${i*.4}s" cx="${x+20}" cy="${y+29}" r="5" fill="${i===3?GOLD:SEC}"/><text x="${x+38}" y="${y+34}" fill="${INK}" font-size="13.5">${n}</text>`+R(x+120,y+25,52,7,{rx:3.5,fill:LINE})+`<rect class="ln" style="--i:${i+6}" x="${x+120}" y="${y+25}" width="${[48,50,44,52,46,50][i]}" height="7" rx="3.5" fill="${SEC}"/>`)});
+  return SVG(s+BOX(8,40,328,400,48,'Event bus',{fill:'none',stroke:GOLD,ink:GOLD,size:13.5,ty:19})+L(9,'M70 358H410',GOLD,2.4,'class="flowl" stroke-dasharray="4 12"')+DOT('M70,358 L410,358',2.8,0,GOLD,4)+T(12,40,432,'Service health, events and command verification'))}
+];
+D99.story({el:'#capStory',scenes:caps,tags:['Visibility','Control','Market','Model','Rules','Optimization','Automation','Admin']});
+
+/* ---------- architecture story ---------- */
+function arch(active,cap){
+  const on=id=>active.includes(id);let s='';
+  const box=(i,id,x,y,w,hh,label,sub)=>{const a=on(id);return A(i,R(x,y,w,hh,{rx:9,fill:a?GOLD:DEEP,op:a?.14:1,stroke:a?GOLD:SEC,so:a?1:.35,sw:a?2:1.4})
+    +`<text x="${x+w/2}" y="${y+(sub?hh/2-3:hh/2+4.5)}" text-anchor="middle" fill="${a?INK:MUT}" font-size="12.5">${label}</text>`+(sub?`<text x="${x+w/2}" y="${y+hh/2+13}" text-anchor="middle" fill="${MUT}" fill-opacity=".8" font-size="10.5">${sub}</text>`:''))};
+  const lab=(i,y,t)=>T(i,40,y,t,{size:10,fill:SEC});
+  s+=lab(0,46,'OPERATOR LAYER')+box(0,'op',40,54,400,34,'Next.js workspace');
+  s+=lab(1,112,'API ACCESS')+box(1,'gw',40,120,400,32,'Core gateway');
+  s+=lab(2,172,'DECISIONS &amp; ACTIONS');
+  [['dispatch','Dispatch','decisions'],['orch','Orchestrator','workflows'],['auto','Automation','rules'],['opt','Optimization','schedules']].forEach(([id,l,sub],k)=>s+=box(2+k*.3,id,40+k*102.67,180,92,44,l,sub));
+  s+=lab(3,246,'DATA &amp; EVENTS');
+  [['tele','Telemetry','measurements'],['mkt','Market','CROPEX'],['db','PostgreSQL','Timescale'],['bus','NATS','event bus']].forEach(([id,l,sub],k)=>s+=box(3+k*.3,id,40+k*102.67,254,92,44,l,sub));
+  s+=lab(4,320,'SITE INTEGRATION')+box(4,'edge',40,328,400,32,'Edge interfaces · PCS · BMS · Inverters · Meters · SCADA');
+  s+=lab(5,384,'PHYSICAL ASSETS')+box(5,'phys',40,392,400,32,'BESS · PV · Wind · Loads · Grid connection');
+  [[88,120],[152,180],[224,254],[298,328],[360,392]].forEach(([a,b],i)=>s+=L(6+i,`M240 ${a}V${b}`,SEC,1.4,'stroke-opacity=".5"'));
+  s+=DOT('M240,88 L240,120',1.6,0,GOLD,3.5)+DOT('M240,152 L240,180',1.6,.5,GOLD,3.5)+DOT('M240,298 L240,328',1.8,.3,GOLD,3.5);
+  return SVG(s+T(12,40,452,cap,{size:12.5,fill:GOLD}))}
+D99.story({el:'#archStory',tags:['Responsibility','Integration','Observability'],scenes:[
+  ()=>arch(['op','gw','dispatch'],'The gateway routes. Dispatch decides.'),
+  ()=>arch(['gw','edge','phys'],'Containerized modules, defined interfaces.'),
+  ()=>arch(['tele','bus','edge'],'Health, events and verification stay visible.')]});
+
+/* ---------- optimization chart ---------- */
+(function(){
+  const base='M30 150 C80 150 100 80 150 80 S220 180 280 170 S350 60 410 78 S470 120 530 118';
+  const opt ='M30 162 C80 162 100 140 150 140 S220 146 280 144 S350 122 410 126 S470 130 530 128';
+  let bars='';for(let i=0;i<24;i++){const v=40+Math.sin(i/24*Math.PI*2+1)*22+rnd(i)*10;bars+=`<rect class="up" style="--i:${i*.4}" x="${32+i*21}" y="${278-v}" width="12" height="${v}" rx="2" fill="${SEC}" fill-opacity=".55"/>`}
+  document.getElementById('optChart').innerHTML=SVG(
+    T(0,30,30,'Baseline vs optimized grid power',{fill:INK,size:13.5})
+    +L(0,base,MUT,2,'stroke-dasharray="6 6"')+L(1,opt,GOLD,3)+DOT(opt,5,0,GOLD,5)
+    +L(3,'M30 200H530',LINE,1.4)+T(4,30,226,'Price signal',{size:12})+bars+L(5,'M30 280H530',LINE,1.4)
+    ,'0 0 560 300');
+})();
+
+/* ---------- deployment mini illustrations ---------- */
+const cloud=(x,y,col=SEC)=>`<path d="M${x-34} ${y+14}a16 16 0 0 1 4-31 22 22 0 0 1 42-4 18 18 0 0 1 8 35z" fill="${DEEP}" stroke="${col}" stroke-width="2" stroke-linejoin="round"/>`;
+const mini=[
+ ()=>cloud(160,50,GOLD)+[50,160,270].map((x,i)=>L(i,`M${x} 112V80 L160 74`,SEC,1.6)+A(i+2,R(x-30,112,60,34,{rx:6,fill:DEEP,stroke:SEC,so:.7})+R(x-20,124,26,5,{rx:2.5,fill:MUT,op:.5})+`<circle cx="${x+18}" cy="127" r="4" fill="${GOLD}"/>`)+DOT(`M${x},112 V80 L160,74`,2.4+i*.4,i*.5)).join(''),
+ ()=>A(0,R(70,24,180,118,{rx:8,fill:DEEP,stroke:SEC,so:.7}))+[0,1,2].map(i=>A(i+1,R(92,40+i*30,100,22,{rx:4,fill:TILE,stroke:SEC,so:.5})+`<circle cx="106" cy="${51+i*30}" r="4" fill="${i===1?GOLD:SEC}" class="seg" style="--d:${i*.5}s"/>`)).join('')+A(4,R(206,64,32,40,{rx:6,fill:'none',stroke:GOLD})+`<path d="M214 64v-8a8 8 0 0 1 16 0v8" fill="none" stroke="${GOLD}" stroke-width="2"/>`)+T(5,160,164,'Local control',{anchor:'middle',size:11.5}),
+ ()=>A(0,R(24,60,96,70,{rx:8,fill:DEEP,stroke:SEC,so:.7})+R(40,78,48,7,{rx:3.5,fill:MUT,op:.5})+R(40,94,32,7,{rx:3.5,fill:MUT,op:.3}))+cloud(240,60,GOLD)+L(2,'M120 94H196',GOLD,1.8,'stroke-dasharray="4 6"')+DOT('M120,94 L196,94',2.2,0,GOLD,4)+DOT('M196,94 L120,94',2.2,1.1,SEC,4)+A(3,`<path d="M160 60l14 6v12c0 12-8 18-14 22-6-4-14-10-14-22V66z" fill="${DEEP}" stroke="${GOLD}" stroke-width="1.8"/>`),
+ ()=>['Modbus','OPC UA','IEC 61850','REST'].map((t,i)=>PILL(i,18,18+i*32,88,24,t,{size:10.5,stroke:i%2?SEC:GOLD})+L(i+2,`M106 ${30+i*32}H140 L160 78`,SEC,1.4)).join('')+P(6,`<circle cx="164" cy="78" r="16" fill="${DEEP}" stroke="${GOLD}" stroke-width="2"/>`)+['BMS','PCS','SCADA'].map((t,i)=>L(7+i,`M180 78 L212 ${34+i*44}H224`,SEC,1.4)+BOX(9+i,224,22+i*44,78,24,t,{rx:6,size:11})).join('')
+];
+document.querySelectorAll('[data-mini]').forEach(el=>{el.innerHTML=`<svg class="mini" viewBox="0 0 320 150">${mini[+el.dataset.mini]()}</svg>`});
+
+/* ---------- product tour tabs ---------- */
+const screens={
+ overview:['assets/ems-overview.png','From fleet overview to individual asset.','Live asset status, state of charge, power and telemetry freshness in a focused operator workspace.','IEMS System Overview with fleet assets, live power, state of charge and telemetry'],
+ optimization:['assets/ems-optimization.png','Compare decisions. Understand the trade-offs.','Reserve envelopes, activation scenarios and baseline versus optimized grid power in one analytical view.','IEMS optimization interface showing ancillary service value and grid power scenarios'],
+ observability:['assets/ems-observability.png','See the health behind the interface.','Service reachability, event delivery, edge routing and dispatch verification reveal the operational state of the platform.','IEMS observability interface showing service health, event bus and dispatch pipeline diagnostics']};
+const tabs=[...document.querySelectorAll('[role=tab]')],img=document.getElementById('product-screen');
+function activate(t){
+  tabs.forEach(x=>{x.setAttribute('aria-selected',x===t);x.tabIndex=x===t?0:-1});
+  const s=screens[t.dataset.screen];
+  document.getElementById('shot').setAttribute('aria-labelledby',t.id);
+  img.classList.add('out');
+  setTimeout(()=>{img.src=s[0];img.alt=s[3];img.onload=()=>img.classList.remove('out');setTimeout(()=>img.classList.remove('out'),400)},320);
+  document.getElementById('screen-full').href=s[0];
+  const ti=document.getElementById('screen-title'),de=document.getElementById('screen-description');
+  [ti,de].forEach(e=>{e.style.transition='opacity .3s';e.style.opacity=0});
+  setTimeout(()=>{ti.textContent=s[1];de.textContent=s[2];[ti,de].forEach(e=>e.style.opacity=1)},320);
+}
+tabs.forEach(t=>{t.addEventListener('click',()=>activate(t));t.addEventListener('keydown',e=>{const i=tabs.indexOf(t);if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];n.focus();activate(n)}})});
+/* screenshot flattens into place as it scrolls in */
+if(window.gsap&&window.ScrollTrigger&&!D99.reduce){
+  gsap.fromTo('#shot',{rotateX:11,scale:.93,y:40},{rotateX:0,scale:1,y:0,ease:'none',scrollTrigger:{trigger:'.shot-stage',start:'top 92%',end:'top 28%',scrub:true}});
+}
+})();
+</script>
+</body>
+</html>
